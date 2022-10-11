@@ -1,2 +1,1 @@
-This is a repo demonstrating writing a scholarly paper using LaTeX. 
-It also demonstrates the beauty of Git in the writing process.
+This is my repo for my stat 3494W class. It contains my proposal and paper about creating a general card-playing neural network and evaluating its performance. 
