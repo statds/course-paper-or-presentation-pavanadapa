@@ -17,29 +17,30 @@ bibliography: ../references/references.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+\doublespacing
+
 ## Introduction
 
-Machine Learning models/ neural networks often are trained for only very specific tasks: playing poker, protein folding, driving a car. While these tasks have many different sub-problems, the end goal is to solve a very distinct task. When neural networks are trained on new tasks, they will forget their old task, called catastrophic forgetting [@catastrophicforgetting]. However, real intelligent beings can learn multiple tasks and excel at each task, they don't forget previous tasks. Therefore its an important goal for neural networks to be able to solve multiple tasks.
+Machine Learning models/ neural networks often are trained for only very specific tasks: playing poker, protein folding, driving a car. While these tasks have many different sub-problems, the end goal is to solve a very distinct task. When neural networks are trained on new tasks, they will forget their old task, called catastrophic forgetting [@catastrophicforgetting]. However, real intelligent beings can learn multiple tasks and excel at each task, they don't forget previous tasks. Therefore, its an important goal for neural networks to be able to solve multiple tasks.
 
 ## Specific Aims
 
-The goal of this paper is train a multitask/ "general"card solving neural network. The goal is train a neural network to play both blackjack and 2-card poker and then compare the results to neural networks trained only to play blackjack and poker, each. The paper is inspired by Open AI's transformer neural network, Whisper, an automatic speech recognition (ASR) system. The paper found that "for sufficiently large models there is no drawback and even benefits to joint multilingual and multitask training." [@whisper]
+The goal of this paper is to train a multitask/ "general" card solving neural network. The goal is to train a neural network to play both blackjack and 2-card poker and then compare the results to neural networks trained only to play only blackjack or poker. The paper is inspired by Open AI's transformer neural network, Whisper, an automatic speech recognition (ASR) system. The paper found that "for sufficiently large models there is no drawback and even benefits to joint multilingual and multitask training" [@whisper].
 
 ## Data
 
-The python implementations of 2-card poker and blackjack will be used train/ test the neural networks. All the data will generated for the paper will be from this setup.
+The python implementations of 2-card poker and blackjack will be used to train/ test the neural networks. This setup will generate all the data for the paper.
 
 ## Research Design and Methods
 
-Overall, three neural networks will be trained. Three deep reinforcement learning TensorFlow models will be created using the Keras API. The general neural network will be trained using method known as "Elastic Weight Consolidation" [@catastrophicforgetting]. Then the models will be compared in two ways. In the first way, the models will separately play the same game and then results for compared using
-Fisher's test. Secondly, the networks will compete against each and then test the head-to-head record using a binomial test.
+Overall, three neural networks will be trained. Three deep reinforcement learning TensorFlow models will be created using the Keras API. The general neural network will be trained using a method known as "Elastic Weight Consolidation" [@catastrophicforgetting]. Then the models will be compared in two ways. In the first way, the models will separately play the same game, and then results will be compared using a Fisher's test. Secondly, the networks will compete against each other and then the head-to-head record be tested using a binomial test.
 
 ## Discussion
 
-I believe the general card model will perform better than each individual model. In other multitask/ "general" neural networks papers, often the multitask outperform the models trained individuality. For example, an agent trained using EWC to play Atari games performed better the baseline, Deep Q-Network (DQN) [@catastrophicforgetting].
+I believe the general card model will perform better than each individual model. In other multitask/ "general" neural network papers, often the multitask neural network outperform the models trained individuality. For example, an agent trained using EWC to play Atari games performed better than the baseline, Deep Q-Network (DQN) [@catastrophicforgetting].
 
 ## Conclusion
 
-To reach true intelligence, neural networks have to be able to solve many tasks. In this paper a general neural network will created using EWC, to overcome catastrophic forgetting , to hopefully outperform individually trained model.
+To reach true intelligence, neural networks have to be able to solve many tasks. In this paper, a general neural network will created using EWC to overcome catastrophic forgetting; to hopefully outperform individually trained model.
 
 ## References
