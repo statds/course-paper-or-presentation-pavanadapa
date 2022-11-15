@@ -1,0 +1,52 @@
+---
+title: "Draft"
+author: "Pavan Adapa"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  pdf_document:
+    extra_dependencies:
+      hyperref: ["colorlinks=true","citecolor=blue"]
+      lipsum: null
+      setspace: null
+fontfamily: times
+fontsize: 12pt
+geometry: margin=1in
+abstract: "Neural networks are rarely trained to trained to good at multple distinct tasks. The goal of this paper is to train a neural network to be good at two different card games, 2-card poker and blackjack using a method called elastic weight consolidation in attempt to avoid catastrophic forgetting."
+bibliography: ../references/references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\doublespacing
+
+## Introduction
+
+Machine Learning models/ neural networks often are trained for only very specific tasks: playing poker, protein folding, driving a car. While these tasks have many different sub-problems, the end goal is to solve a very distinct task. When neural networks are trained on new tasks, they will forget their old task, called catastrophic forgetting [@catastrophicforgetting]. However, real intelligent beings can learn multiple tasks and excel at each task, they don't forget previous tasks. Therefore, its an important goal for neural networks to be able to solve multiple tasks.
+
+The goal of this paper is to train a multitask/ "general" card solving neural network. The goal is to train a neural network to play both blackjack and 2-card poker and then compare the results to neural networks trained only to play only blackjack or poker.
+
+Blackjack and poker are two very popular card games played with a standard 52 card deck. The goal of blackjack is get to get value of your hand as close to 21 without going over. If you go over 21, you lose. Initially the player is given 2 cards but you can hit, draw a card, as many times as you want. Poker is a card game in which a player is given cards and attempts make the best hand with a bridge, cards all players . Then bets against other players to see who has the best hand. The 2-card poker is a version of poker in which there are no rounds, the player has to make a bet based on his 2 cards and the bridge.
+
+As Blackjack and poker are two very popular card games, there have been papers and projects that have trained neural networks to play these card games. However there has not been much effort in to training neural networks to play multiple card games or in general train neural network to be good at multiple different tasks. This paper will be an attempt to train a neural network to be good at poker and blackjack using a method called elastic weight consolidation that first appeared in 2016 deep mind paper [@catastrophicforgetting].
+
+## Data
+
+All the data for this paper will generated from the python code created by me.
+
+## Methods
+
+The blackjack and poker neural networks are trained using q-learning. Q-learning is a model-free reinforcement learning algorithm that attempts to find the value of playing a certain action at a certain state. For example in the black jack, a Q-learning model would to attempt the find the value of hitting, adding a card to hand when the cards in the hand are ace and king. Since Q-learning is model-free, there is learning there is not model the blackjack and poker when training the neural networks. Only look at action state pairs.
+
+Catastrophic forgetting occurs because when a model is trained on a new task after already learning another task, the new task overwrites the weights for the old task. Elastic Weight consolidation (EWC) avoids this problem by creates
+
+## Results
+
+The coding for the poker neural network is not completed yet and therefore nor has the multi-task neural network been completed. It will be done by the final project.
+
+## Discussion
+
+In this paper, the goal is to train a neural network to play two different card games. While poker and blackjack are two very different card games, they still trained using the same neural network structure. Another research question that could have been explored instead is to train a neural network to do two very different tasks. For example, a neural network could be trained to be good at playing blackjack and good at classifying images of dogs. This multitask neural network has trained as a two different tasks.
+
+## References
