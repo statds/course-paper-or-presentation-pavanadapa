@@ -1,6 +1,9 @@
 ---
 title: "EWC for Multi-Card AI"
-author: "Pavan Adapa"
+author: |
+ | Pavan Adapa
+ | Department of Statistics
+ | University of Connecituct
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
   pdf_document:
@@ -10,9 +13,7 @@ output:
       hyperref: ["colorlinks=true","citecolor=blue"]
       lipsum: null
       setspace: null
-  toc: yes
-  includes:
-    in_header: style.tex
+    toc: yes
 fontfamily: times
 fontsize: 12pt
 geometry: margin=1in
@@ -50,7 +51,7 @@ All data from this paper currently is generated from the program files proved in
 
 The code for training a DQN model to play 2-card poker would be quite similar to the code to train DQN to play blackjack. The DQN would be trained against a conservative poker "ai" that only bids when it has good cards. The "ai" would never bluff. Then would go against similar competitions like those the blackjack DQN faced.
 
-The code for the multi-card neural network is multilayered. After the initial task is trained, the loss function for elastic weight consolidation (EWC) (Equation \ref{3}) is used to train. And after it is trained it can be run against similar tests that the other DQNs faced.
+The code for the multi-card neural network is multilayered. After the initial task is trained, the loss function for elastic weight consolidation (EWC) (Equation \ref{3}) is used to train. And after it is trained it can be run against similar tests that the other DQNs faced. 
 
 
 ## 3. Methods
@@ -106,7 +107,7 @@ Figure \ref{fig2} and Figure \ref{fig3} compares the results win rate of the tra
 
 Figure \ref{fig4} compares the results win rate of the trained blackjack DQN against a random "ai". The trained blackjack DQN much like the conservative "ai" seems to dominate the random "ai". The DQN beat the random "ai" 114/200 times. Carrying out an exact binomial test for the DQN's record indicates that such an outcome is 05.624% likely [^1]. Indicating that more rounds should have been played to truly determine if the conservative "ai" is truly better. 
 
-[^1]: The code to get these values is in binomial.r
+[^1][b]: The code to get these values is in binomial.r
 
 ![Win Rate of DQN vs Random \label{fig4}](../figures/plot3.png)
 
