@@ -12,28 +12,12 @@
   abstract = {The ability to learn tasks in a sequential fashion is crucial to the development of artificial intelligence. Until now neural networks have not been capable of this and it has been widely thought that catastrophic forgetting is an inevitable feature of connectionist models. We show that it is possible to overcome this limitation and train networks that can maintain expertise on tasks that they have not experienced for a long time. Our approach remembers old tasks by selectively slowing down learning on the weights important for those tasks. We demonstrate our approach is scalable and effective by solving a set of classification tasks based on a hand-written digit dataset and by learning several Atari 2600 games sequentially.}
 }
 
-@article{rlearning,
- author = {Johannes Heinrich and David Silver},
- title = {Deep Reinforcement Learning from Self-Play in Imperfect-Information Games},
- journal = {arXiv preprint arXiv:1603.01121},
- year = {2016},
- URL = {https://arxiv.org/abs/1603.01121},
-}
-
-@article{ddpg,
-  author = {Timothy P. Lillicrap, Jonathan J. Hunt, Alexander Pritzel, Nicolas Heess, Tom Erez, Yuval Tassa, David Silver, Daan Wierstra},
-  title = {Continuous control with deep reinforcement learning},
-  journal = {arXiv preprint arXiv:1509.02971},
-  year = {2015},
-  URL = {https://arxiv.org/abs/1509.02971},
-}
-
-@artcle{ppo,
-  author = {John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov},
-  title = {Proximal Policy Optimization Algorithms},
-  journal = {arXiv preprint arXiv:1707.06347},
-  year = {2017},
-  URL = {https://arxiv.org/abs/1707.06347},
+@article{whisper,
+  author = {Alec Radford, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, Ilya Sutskever},
+  title = {Robust Speech Recognition via Large-Scale Weak Supervision},
+  journal = {OpenAI},
+  year = {2022},
+  URL = {"https://cdn.openai.com/papers/whisper.pdf"},
 }
 
 @article{DQN,
@@ -42,6 +26,16 @@
   journal = {Nature},
   year = {2015},
   URL = {"https://www.nature.com/articles/nature14236"},
+}
+
+@misc{blackjacklearner,
+  author = {Scott Rome},
+  title = {blackjacklearner},
+  year = {2016},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/srome/blackjacklearner}},
+  commit = {7123be68ee3eaa146670e3a7e4929e1eb6819d1c}
 }
 
 @misc{chollet2015keras,
@@ -83,15 +77,4 @@
   version      = {latest},
   doi          = {10.5281/zenodo.3509134},
   url          = {https://doi.org/10.5281/zenodo.3509134}
-}
-
-@software{matplotlib,
-  author       = {Hunter, J. D.},
-  title        = {Matplotlib: {A} 2D graphics environment},
-  month        = jun,
-  year         = 2007,
-  publisher    = {Computing In Science \& Engineering},
-  version      = {2.2.3},
-  doi          = {10.1109/MCSE.2007.55},
-  url          = {https://doi.org/10.1109/MCSE.2007.55}
 }
